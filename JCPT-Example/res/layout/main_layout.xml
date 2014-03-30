@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/leftPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/buttonLoadObj1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Tractor" />
+
+            <Button
+                android:id="@+id/buttonLoadObj2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Camaro" />
+
+            <Button
+                android:id="@+id/buttonLoadObj3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Police" />
+
+            <Button
+                android:id="@+id/buttonLoadObj4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Truck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cameraControlLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leftPanel"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/joystickView"
+                    android:layout_centerHorizontal="true"
+                    android:text="Camera Control" />
+
+                <com.carlos.jpct.joystick.JoystickView
+                    android:id="@+id/joystickView"
+                    android:layout_width="175dip"
+                    android:layout_height="175dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="35dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameObjectOptions"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#66000000"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/buttonHide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="X" />
+
+                <TextView
+                    android:id="@+id/textViewObjectControls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/buttonHide"
+                    android:layout_centerHorizontal="true"
+                    android:text="Object Controls" />
+
+                <Button
+                    android:id="@+id/buttonMode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonHide"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Translation" />
+
+                <Button
+                    android:id="@+id/ButtonAxisZPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/ButtonAxisZLess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/textViewAxisZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/ButtonAxisZPlus"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Axis Z" />
+
+                <Button
+                    android:id="@+id/buttonScalePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ButtonAxisZLess"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/buttonScaleLess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ButtonAxisZLess"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/textViewScale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/buttonScaleLess"
+                    android:layout_marginLeft="10dp"
+                    android:text="Scale" />
+
+                <Button
+                    android:id="@+id/buttonRemove"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonScalePlus"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Remove" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/leftPanel" />
+
+</RelativeLayout>

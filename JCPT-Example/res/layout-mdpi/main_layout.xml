@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/leftPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:orientation="horizontal"
+            android:padding="0dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light"
+                android:padding="0dp" >
+
+                <Button
+                    android:id="@+id/buttonLoadObj2"
+                    android:layout_width="108dp"
+                    android:paddingTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Camaro" />
+
+                <Button
+                    android:id="@+id/buttonLoadObj3"
+                    android:layout_width="120dp"
+                    android:paddingTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Car" />
+
+                <Button
+                    android:id="@+id/buttonLoadObj4"
+                    android:layout_width="70dp"
+                    android:paddingTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Truck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:background="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:padding="0dp" >
+
+                <com.carlos.jpct.joystick.JoystickView
+                    android:id="@+id/joystickView"
+                    android:layout_width="75dip"
+                    android:layout_height="75dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameObjectOptions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/background_light"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/buttonHide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="X" />
+
+                <TextView
+                    android:id="@+id/textViewObjectControls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/buttonHide"
+                    android:layout_centerHorizontal="true"
+                    android:text="Object Controls" />
+
+                <Button
+                    android:id="@+id/buttonMode"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonHide"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Translation" />
+                
+                <TextView
+                    android:id="@+id/textViewAxisZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="Axis Z" />
+                
+                <Button
+                    android:id="@+id/ButtonAxisZPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_toRightOf="@id/textViewAxisZ"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/ButtonAxisZLess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_toRightOf="@id/ButtonAxisZPlus"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/buttonScalePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_toRightOf="@id/ButtonAxisZLess"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/buttonScaleLess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_toRightOf="@id/buttonScalePlus"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/textViewScale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonMode"
+                    android:layout_alignBaseline="@+id/buttonScaleLess"
+                    android:layout_toRightOf="@id/ButtonAxisZLess"
+                    android:layout_marginLeft="2dp"
+                    android:text="Scale" />
+
+                <Button
+                    android:id="@+id/buttonRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/buttonMode"
+                    android:layout_below="@id/buttonHide"
+                    android:layout_marginTop="5dp"
+                    android:text="Remove" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/leftPanel" />
+
+</RelativeLayout>
